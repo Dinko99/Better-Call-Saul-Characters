@@ -9,7 +9,14 @@ const CharacterItem = ({ character }) => {
         <p className='occupation'>
           Occupation: {character.occupation.join(', ')}
         </p>
-        <p className='status'>Status: {character.status}</p>
+        <p className='status'>
+          Status:{' '}
+          <span
+            style={{ color: character.status === 'Alive' ? 'green' : 'red' }}
+          >
+            {character.status}
+          </span>
+        </p>
         <p className='seasons'>
           Appeared in seasons:{' '}
           {character.better_call_saul_appearance.join(', ')}

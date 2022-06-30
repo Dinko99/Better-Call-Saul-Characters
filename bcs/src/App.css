@@ -40,6 +40,7 @@ header {
   display: grid;
   grid-template-columns: 240px 1fr;
   box-shadow: 0 0 20px 2px;
+  background-color: antiquewhite;
 }
 
 .character-img {
@@ -48,4 +49,14 @@ header {
   border-bottom-left-radius: 10px;
   width: 200px;
   height: 240px;
+}
+
+span {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1300px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
