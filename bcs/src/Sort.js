@@ -1,11 +1,14 @@
 import React from 'react';
 
-const Sort = () => {
+const Sort = ({ setCharacters, characters }) => {
+  const setAlive = (e) => {
+    let value = e.target.value;
+  };
   return (
     <div className='sort'>
       <select>
-        <option>All</option>
-        <option>Alive</option>
+        <option onClick={() => setCharacters(characters)}>All</option>
+        <option onClick={() => setCharacters(setAlive)}>Alive</option>
         <option>Deceased</option>
       </select>
     </div>

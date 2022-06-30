@@ -8,7 +8,7 @@ import Sort from './Sort';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState();
 
   useEffect(() => {
     const fetchCharacters = async () => {
@@ -30,7 +30,7 @@ function App() {
   ) : (
     <>
       <Header />
-      <Sort />
+      <Sort setCharacters={setCharacters} characters={characters} />
       <CharacterGrid characters={characters} />
     </>
   );
