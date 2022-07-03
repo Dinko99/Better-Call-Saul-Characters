@@ -23,7 +23,7 @@ function App() {
         (item) => item.status === value
       );
       setFiltered(deceasedCharacters);
-    } else if (value === 'All') {
+    } else if (value === 'All Characters') {
       setFiltered(characters);
     }
   };
@@ -50,6 +50,7 @@ function App() {
   ) : (
     <>
       <Header />
+
       <Sort characters={characters} filtered={filtered} isAlive={isAlive} />
       <CharacterGrid filtered={filtered} />
     </>
